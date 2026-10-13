@@ -83,6 +83,4 @@ Run the queries in a SQLite client or copy individual queries into DB Browser fo
 
 AI assistance was used to brainstorm a simple architecture, review code structure, and improve documentation. I checked the table design and query logic, kept the implementation to Python and basic SQL, and chose SQLite/Streamlit to make the project easy to run and explain. Before submission, I ran the pipeline, checked the database rows, executed the SQL queries, and verified that the dashboard loads. I would only claim checks I personally completed.
 
-## 9. Suggested screenshots for submission
 
-Add screenshots of (1) successful fetch output, (2) the SQL top-10 query result, and (3) the dashboard with KPI cards and charts. Do not write made-up counts in the README; use values from your own run.
