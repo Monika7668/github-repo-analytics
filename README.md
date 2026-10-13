@@ -83,4 +83,18 @@ Run the queries in a SQLite client or copy individual queries into DB Browser fo
 
 AI assistance was used to brainstorm a simple architecture, review code structure, and improve documentation. I checked the table design and query logic, kept the implementation to Python and basic SQL, and chose SQLite/Streamlit to make the project easy to run and explain. Before submission, I ran the pipeline, checked the database rows, executed the SQL queries, and verified that the dashboard loads. I would only claim checks I personally completed.
 
+## 9. Dashboard Preview
 
+The Streamlit dashboard provides an overview of GitHub repository metrics, including repository activity and other key insights.
+
+### Dashboard Overview
+
+![Dashboard Overview](screenshots/dashboard1.png)
+
+### Additional Dashboard Views
+
+![Dashboard View 2](screenshots/dashboard2.png)
+
+![Dashboard View 3](screenshots/dashboard3.png)
+
+![Dashboard View 4](screenshots/dashboard4.png)
