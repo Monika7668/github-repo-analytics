@@ -1,6 +1,6 @@
 # GitHub Repository Analytics Pipeline
 
-A beginner-friendly Data Engineering take-home project: fetch public repository data from the GitHub REST API, preserve raw responses, upsert cleaned records into SQLite, analyse the data with SQL, and display a small Streamlit dashboard.
+A Data Engineering take-home project: fetch public repository data from the GitHub REST API, preserve raw responses, upsert cleaned records into SQLite, analyse the data with SQL, and display a small Streamlit dashboard.
 
 ## 1. Why this API and metric?
 
@@ -16,7 +16,7 @@ GitHub provides useful public metadata such as repository name, programming lang
 
 ## 3. Requirements
 
-- Python 3.10+
+- Python 3.13+
 - Internet access to `api.github.com`
 - No API key required for a basic public-data demo. GitHub rate limits apply. An optional personal access token can be provided as `GITHUB_TOKEN` to increase the available quota; do not commit the token.
 
@@ -32,21 +32,10 @@ python fetch_data.py
 streamlit run dashboard.py
 ```
 
-### macOS/Linux
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-python fetch_data.py
-streamlit run dashboard.py
-```
-
 The dashboard opens in a browser. The fetch script defaults to the top repositories matching `stars:>1000`, sorted by stars, and fetches up to 3 pages of 100 results. Adjust `MAX_PAGES` if needed. The GitHub Search API has its own result and rate limits, so keep the sample modest.
 
 To use an optional token:
 - PowerShell: `$env:GITHUB_TOKEN="your_token_here"`
-- macOS/Linux: `export GITHUB_TOKEN="your_token_here"`
 
 Never share or commit the token.
 
@@ -79,7 +68,7 @@ Run the queries in a SQLite client or copy individual queries into DB Browser fo
 - SQL is used for reporting logic; Python is used for API interaction, basic validation, and orchestration.
 - The assignment asks for a scheduled **or on-demand** pipeline, so this project uses on-demand execution to stay within the 3–4 hour time box.
 
-## 8. AI assistance note (edit to reflect your actual use)
+## 8. AI assistance note
 
 AI assistance was used to brainstorm a simple architecture, review code structure, and improve documentation. I checked the table design and query logic, kept the implementation to Python and basic SQL, and chose SQLite/Streamlit to make the project easy to run and explain. Before submission, I ran the pipeline, checked the database rows, executed the SQL queries, and verified that the dashboard loads. I would only claim checks I personally completed.
 
